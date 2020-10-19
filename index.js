@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// array of questions for user
+// Array of questions for user
 const questions = () => {
     return inquirer.prompt([
         {
@@ -149,3 +149,19 @@ const questions = () => {
         }
     ]);
 };
+
+// Function to write README
+function writeFile(fileName) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./output_readme/README.md', fileName, err => {
+            if (err){
+                reject(err);
+                return;
+            }
+            resolve({
+                success: true,
+                message: 'README created'
+            });
+        });
+    });
+}
