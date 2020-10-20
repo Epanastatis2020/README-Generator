@@ -5,7 +5,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   ## Description
-  [![License](https://img.shields.io/badge/License-${data.license}-<Blue>.svg)](https://shields.io/)
+  [![License](https://img.shields.io/badge/License-${data.license}-<Blue>.svg)](https://shields.io/)  
   ${data.description}
   ## Table of Contents
   * [User Story](#userStory)
@@ -32,7 +32,7 @@ function generateMarkdown(data) {
   ${data.tests}
   
   ## Contact
-  Github: [${data.githubUser}](https://github.com/${data.githubUser})
+  Github: [${data.githubUser}](https://github.com/${data.githubUser})  
   Email: <${data.email}>
   `;
 }

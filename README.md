@@ -2,7 +2,7 @@
 
 ## Description
 
-[![License](https://img.shields.io/badge/License-MIT-<Blue>.svg)](https://shields.io/)
+[![License](https://img.shields.io/badge/License-MIT-<Blue>.svg)](https://shields.io/)  
 This command line interface application generates a README based on user input. This very README was generated using the application!
 
 ## Table of Contents
@@ -48,5 +48,5 @@ N/A
 
 ## Contact
 
-Github: [Epanastatis2020](https://github.com/Epanastatis2020)
+Github: [Epanastatis2020](https://github.com/Epanastatis2020)  
 Email: <test@email.com.au>
