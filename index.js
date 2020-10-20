@@ -36,6 +36,21 @@ const questions = () => {
             }
         },
         {
+            // User Story 
+            type: 'input',
+            name: 'userStory',
+            message: 'Please provide a user story for your project.',
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                }
+                else {
+                    console.log('No input was detected. Please provide a user story for your project.');
+                    return false;
+                }
+            }
+        },
+        {
             // Installation Information
             type: 'input',
             name: 'installation',
@@ -90,7 +105,7 @@ const questions = () => {
         {
             // Video
             type: 'input',
-            name: 'images',
+            name: 'video',
             message: "Please provide a URL link to a video showcasing the project. If you don't have one, just put 'N/A'",
             validate: contributeInput => {
                 if (contributeInput) {
@@ -177,7 +192,7 @@ function init() {
     })
     // Creates a .md file and writes the markdown to it
     .then(readmeMarkDown => {
-      return writeToFile(readmeMarkDown);
+      return writeFile(readmeMarkDown);
     })
     // Catches errors
     .catch(err => {

@@ -8,7 +8,7 @@ function generateMarkdown(data) {
   [![License](https://img.shields.io/badge/License-${data.license}-<Blue>.svg)](https://shields.io/)
   ${data.description}
   ## Table of Contents
-  * [User Story](#user story)
+  * [User Story](#userStory)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -25,15 +25,15 @@ function generateMarkdown(data) {
   ## License
   This project uses the ${data.license} license.
   ## Images
-  <a href=${data.images}</a>
+  [Images If Available](${data.images})
   ## Video
-  <a href=${data.video}</a>
+  [Video If Available](${data.video})
   ## Tests
   ${data.tests}
   
   ## Contact
-  Github: <a href=https://github.com/${data.githubUser}>${data.githubUser}</a>
-  Email: <a href="mailto:${data.email}"</a>
+  Github: [${data.githubUser}](https://github.com/${data.githubUser})
+  Email: <${data.email}>
   `;
 }
 
