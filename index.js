@@ -165,3 +165,26 @@ function writeFile(fileName) {
         });
     });
 }
+
+// function to initialize program
+function init() {
+
+    // Calls the inquirer prompt function to get answers
+    questions()
+    // Then creates the markdown doc
+    .then(markDownData => {
+      return generateMarkdown(markDownData);
+    })
+    // Creates a .md file and writes the markdown to it
+    .then(readmeMarkDown => {
+      return writeToFile(readmeMarkDown);
+    })
+    // Catches errors
+    .catch(err => {
+      console.log(err);
+    });
+
+}
+
+// function call to initialize program
+init();
